@@ -1,0 +1,174 @@
+:root {
+    --pink-dark: #db2777;
+    --pink-medium: #ec4899;
+    --pink-light: #fbcfe8;
+    --bg-love: #fff1f2;
+    --text-color: #4c0519;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-love);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-x: hidden;
+    position: relative;
+    padding: 20px;
+}
+
+/* Cajas contenedoras */
+.login-box, .card, .counter-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 35px 25px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(219, 39, 119, 0.15);
+    max-width: 480px;
+    width: 100%;
+    border: 1px solid rgba(251, 207, 232, 0.5);
+    z-index: 5;
+}
+
+.heart-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+h2 { 
+    font-size: 1.25rem; 
+    margin-bottom: 20px; 
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+h1 { 
+    color: var(--pink-dark); 
+    margin-bottom: 10px; 
+    font-size: 2.2rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Inputs y Botones */
+input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid var(--pink-light);
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    text-align: center;
+    color: var(--text-color);
+    transition: border-color 0.3s;
+}
+
+input:focus { 
+    border-color: var(--pink-dark); 
+}
+
+button {
+    background: linear-gradient(135deg, var(--pink-medium), var(--pink-dark));
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    margin-top: 20px;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(219, 39, 119, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+button:hover { 
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(219, 39, 119, 0.4);
+}
+
+.error { 
+    color: #e11d48; 
+    margin-top: 15px; 
+    font-weight: 600; 
+    font-size: 0.95rem;
+}
+
+.hidden { 
+    display: none !important; 
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    width: 100%;
+}
+
+.love-letter {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+#counter {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--pink-dark);
+    margin-top: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* Animación de entrada */
+.animate-fade {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- EFECTO DE CORAZONES FLOTANTES --- */
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-heart {
+    position: absolute;
+    bottom: -20px;
+    color: var(--pink-medium);
+    font-size: 1.5rem;
+    opacity: 0.7;
+    animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-105vh) rotate(360deg);
+        opacity: 0;
+    }
+}

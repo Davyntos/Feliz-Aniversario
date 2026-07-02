@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un detalle para mi niña hermosa ♥</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="hearts-container" id="hearts-container"></div>
+
+    <div class="login-box" id="login-box">
+        <div class="heart-icon">🔒❤️</div>
+        <h2>Introduce tu primer o segundo nombre para ingresar a tu sorpresa:</h2>
+        <input type="text" id="name-input" placeholder="Escribe aquí tu nombre...">
+        <button onclick="checkName()">Desbloquear Detalle ✨</button>
+        <p id="error-msg" class="error"></p>
+    </div>
+
+    <div class="main-content hidden" id="main-content">
+        <h1>¡Feliz Primer Mes, Karla Frida! 🌹</h1>
+        
+        <div class="card animate-fade">
+            <p class="love-letter">
+                Hoy, 2 de julio, cumplimos nuestro primer mes juntos y quería demostrarte que eres muy especial para mí. 
+                Gracias por cada risa compartida, por tus mensajes y por hacer de estas semanas el inicio de algo hermoso. 
+                Eres una mujer increíble, Karla Frida Colin Cadena, y me encanta llamarte mi novia. ¡Por muchos meses más! ♥
+            </p>
+        </div>
+
+        <div class="counter-box animate-fade">
+            <h3>Tiempo construyendo nuestra historia:</h3>
+            <div id="counter">Calculando tiempo...</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
